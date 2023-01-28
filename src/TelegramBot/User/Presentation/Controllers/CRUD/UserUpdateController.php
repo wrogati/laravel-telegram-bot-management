@@ -10,7 +10,7 @@ use TelegramBot\User\Presentation\Requests\UserUpdateRequest;
 
 class UserUpdateController extends Controller
 {
-    public function __construct(private readonly Update $update)
+    public function __construct(private readonly Update $action)
     {
     }
 
@@ -19,7 +19,7 @@ class UserUpdateController extends Controller
      */
     public function __invoke(UserUpdateRequest $request, string $userId): Response
     {
-        $this->update->handle($userId, $request->validated());
+        $this->action->handle($userId, $request->validated());
 
         return response()->noContent();
     }

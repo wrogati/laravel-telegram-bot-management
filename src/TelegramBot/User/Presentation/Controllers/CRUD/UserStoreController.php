@@ -9,12 +9,12 @@ use TelegramBot\User\Presentation\Resources\UserResource;
 
 class UserStoreController extends Controller
 {
-    public function __construct(private readonly Store $store)
+    public function __construct(private readonly Store $action)
     {
     }
 
     public function __invoke(UserStoreRequest $request): UserResource
     {
-        return UserResource::make($this->store->handle($request->validated()));
+        return UserResource::make($this->action->handle($request->validated()));
     }
 }
