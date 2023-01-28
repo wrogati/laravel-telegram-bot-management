@@ -26,7 +26,12 @@
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
             "TelegramBot\\": "TelegramBot/"
-        }
+        },
+        "files": [
+            "app/Services/TelegramService/helpers/config.php",
+            "app/Services/TelegramService/helpers/singleton.php",
+            "app/Services/TelegramService/helpers/string.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
