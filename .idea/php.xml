@@ -118,6 +118,9 @@
       <path value="$PROJECT_DIR$/src/vendor/vlucas/phpdotenv" />
       <path value="$PROJECT_DIR$/src/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/src/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/src/vendor/jean85/pretty-package-versions" />
+      <path value="$PROJECT_DIR$/src/vendor/jenssegers/mongodb" />
+      <path value="$PROJECT_DIR$/src/vendor/mongodb/mongodb" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
