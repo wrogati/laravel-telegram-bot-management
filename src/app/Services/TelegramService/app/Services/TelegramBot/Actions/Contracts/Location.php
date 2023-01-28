@@ -6,7 +6,6 @@ use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Message;
 use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Message as MessageDTO;
 use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\Location\Location as LocationDTO;
 use App\Services\TelegramService\app\Services\TelegramBot\Http\LocationClient;
-use App\Services\TelegramService\app\Services\TelegramBot\Http\MessageClient;
 use App\Services\TelegramService\app\Services\TelegramBot\Http\TelegramClient;
 
 class Location implements BotLocationContract

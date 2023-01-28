@@ -1,15 +1,17 @@
 <?php
 
-namespace TelegramBot\Message\Text\Infrastructure\Providers;
+namespace TelegramBot\Shared\Infrastructure\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\Response;
+use TelegramBot\Shared\Application\Services\TelegramService;
 
-class MessageTextRouteProvider extends RouteServiceProvider
+class SharedRouteProvider extends RouteServiceProvider
 {
     public function map(): void
     {
-        Route::prefix('message/text')->name('message.text.')->group(
+        Route::prefix('api')->name('message.text.')->group(
             function () {
                 /*
                 |--------------------------------------------------------------------------
@@ -18,9 +20,8 @@ class MessageTextRouteProvider extends RouteServiceProvider
                 */
                 Route::middleware([/* input middlewares */])->group(
                     function () {
-                        Route::get('/', function () {
-                            return response()->noContent();
-                        })->name('send');
+                        Route::get('/', fn() => response()->json(['message' => 'bot on!'], Response::HTTP_OK))
+                            ->name('health-check');
                     }
                 );
             }
