@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Shared\Domain;
+namespace TelegramBot\Shared\Domain\Services;
 
 
 use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotContract;

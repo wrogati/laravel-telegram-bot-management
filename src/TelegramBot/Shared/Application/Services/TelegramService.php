@@ -7,7 +7,7 @@ use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotL
 use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotMessageContract;
 use App\Services\TelegramService\app\Services\TelegramBot\Contracts\TelegramBotServiceContract;
 use App\Services\TelegramService\app\Services\TelegramBot\TelegramBot;
-use TelegramBot\Shared\Domain\TelegramServiceInterface;
+use TelegramBot\Shared\Domain\Services\TelegramServiceInterface;
 
 class TelegramService implements TelegramServiceInterface
 {
