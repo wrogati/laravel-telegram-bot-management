@@ -18,7 +18,7 @@ class UserUpdateProvider
         return $user;
     }
 
-    public static function payloadExpected(): array
+    public static function successPayloadExpected(): array
     {
         return [
             'first_name' => 'changed',
@@ -34,5 +34,22 @@ class UserUpdateProvider
     public static function id(): string
     {
         return Str::random();
+    }
+
+    public static function failPayloadExpected(): array
+    {
+        return [
+            'first_name' => 'changed',
+            'last_name' => 'c'
+        ];
+    }
+
+    public static function errorsExpected(): array
+    {
+        return [
+            'errors' => [
+                'last_name'
+            ]
+        ];
     }
 }

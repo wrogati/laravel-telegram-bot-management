@@ -6,6 +6,8 @@ use App\Models\User;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use TelegramBot\User\Application\Actions\Update;
+use TelegramBot\User\Domain\Exceptions\UserException;
+use TelegramBot\User\Domain\Exceptions\UserNotUpdatedException;
 use TelegramBot\User\Domain\Repository\UserRepository;
 use Tests\Providers\User\UserUpdateProvider as Provider;
 
@@ -24,7 +26,7 @@ class UpdateTest extends TestCase
         $userRepositoryMock = Mockery::mock(UserRepository::class);
 
         $userExpected = Provider::userExpected();
-        $payloadExpected = Provider::payloadExpected();
+        $payloadExpected = Provider::successPayloadExpected();
         $id = Provider::id();
 
         $userModelStub->method('findOrFail')
