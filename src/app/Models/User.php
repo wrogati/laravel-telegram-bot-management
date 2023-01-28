@@ -12,6 +12,8 @@ class User extends Model
 {
     use  HasFactory, SoftDeletes;
 
+    protected $connection = 'mongodb';
+
     protected $fillable = [
         'first_name',
         'last_name',
