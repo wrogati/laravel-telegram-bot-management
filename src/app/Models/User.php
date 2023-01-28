@@ -13,7 +13,8 @@ class User extends Model
     use  HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name',
+        'first_name',
+        'last_name',
         'email',
         'password',
     ];
