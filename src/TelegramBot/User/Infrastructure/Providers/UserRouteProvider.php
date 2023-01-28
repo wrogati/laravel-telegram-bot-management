@@ -5,6 +5,7 @@ namespace TelegramBot\User\Infrastructure\Providers;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 use TelegramBot\User\Presentation\Controllers\CRUD\UserStoreController;
+use TelegramBot\User\Presentation\Controllers\CRUD\UserUpdateController;
 
 class UserRouteProvider extends RouteServiceProvider
 {
@@ -15,6 +16,7 @@ class UserRouteProvider extends RouteServiceProvider
                 Route::middleware([/* input middlewares */])->group(
                     function () {
                         Route::post('', UserStoreController::class)->name('store');
+                        Route::patch('{userId}', UserUpdateController::class)->name('update');
                     }
                 );
             }
