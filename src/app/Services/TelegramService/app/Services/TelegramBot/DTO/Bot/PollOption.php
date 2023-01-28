@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Bot;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Bot;
 
 class PollOption
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Http\DTO\File\MediaGroup;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\MediaGroup;
 
-use TelegramBot\Services\TelegramBot\DTO\DTO;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\DTO;
 
 class InputoDocument extends DTO
 {

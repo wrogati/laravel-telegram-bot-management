@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Contracts;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Contracts;
 
-use TelegramBot\Services\TelegramBot\Actions\Contracts\BotContract;
-use TelegramBot\Services\TelegramBot\Actions\Contracts\BotMessageContract;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotContract;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotMessageContract;
 
 interface TelegramBotServiceContract
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Game;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Game;
 
-use TelegramBot\Services\TelegramBot\DTO\Message\Animation;
-use TelegramBot\Services\TelegramBot\DTO\Message\MessageEntity;
-use TelegramBot\Services\TelegramBot\DTO\Photo\PhotoSize;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Animation;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\MessageEntity;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Photo\PhotoSize;
 
 class Game
 {

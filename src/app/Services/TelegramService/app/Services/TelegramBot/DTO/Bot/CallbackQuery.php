@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Bot;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Bot;
 
-use TelegramBot\Services\TelegramBot\DTO\Message\Message;
-use TelegramBot\Services\TelegramBot\DTO\User\User;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Message;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\User\User;
 
 class CallbackQuery
 {

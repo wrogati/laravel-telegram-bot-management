@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Helpers;
+namespace App\Services\TelegramService\app\Helpers;
 
-use TelegramBot\Services\TelegramBot\Http\DTO\File\MediaGroup\MediaGroup;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\MediaGroup\MediaGroup;
 
 class RequestHelper
 {

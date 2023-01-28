@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Message;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Message;
 
 class MessageAutoDeleteTimerChanged
 {

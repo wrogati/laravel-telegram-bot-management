@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Http\DTO\Location;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\Location;
 
-use TelegramBot\Services\TelegramBot\DTO\DTO;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\DTO;
 
 class Location extends DTO
 {
@@ -15,7 +15,7 @@ class Location extends DTO
     public ?bool $protectContent = null;
     public ?int $replyMessageId = null;
     public ?bool $allowSendingWithoutReply = null;
-    
+
     public function __construct(
         public readonly string $chatId,
         public readonly float  $longitude,
@@ -27,7 +27,7 @@ class Location extends DTO
     public function setMessageThreadId(int $value): self
     {
         $this->messageThreadId = $value;
-        
+
         return $this;
     }
 

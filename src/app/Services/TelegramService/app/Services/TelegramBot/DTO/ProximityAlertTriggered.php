@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO;
 
-use TelegramBot\Services\TelegramBot\DTO\User\User;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\User\User;
 
 class ProximityAlertTriggered
 {

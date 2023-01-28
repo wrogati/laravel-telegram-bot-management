@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Venue;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Venue;
 
-use TelegramBot\Services\TelegramBot\DTO\Message\Location;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Location;
 
 class TelegramVenue
 {

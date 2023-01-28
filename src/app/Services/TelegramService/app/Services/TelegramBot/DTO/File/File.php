@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\File;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\File;
 
 class File
 {

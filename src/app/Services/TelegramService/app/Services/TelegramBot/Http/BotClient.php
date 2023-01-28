@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Http;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Http;
 
 use GuzzleHttp\Psr7\Response;
 

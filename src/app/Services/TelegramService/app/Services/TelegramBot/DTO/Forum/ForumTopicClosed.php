@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Forum;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Forum;
 
 class ForumTopicClosed
 {

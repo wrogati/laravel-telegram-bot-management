@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Photo;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Photo;
 
 class Photo
 {

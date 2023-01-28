@@ -1,11 +1,11 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Bot;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Bot;
 
-use TelegramBot\Services\TelegramBot\DTO\Chat\Chat;
-use TelegramBot\Services\TelegramBot\DTO\Chat\ChatInviteLink;
-use TelegramBot\Services\TelegramBot\DTO\Chat\ChatMember;
-use TelegramBot\Services\TelegramBot\DTO\User\User;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat\Chat;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat\ChatInviteLink;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat\ChatMember;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\User\User;
 
 class ChatMemberUpdated
 {

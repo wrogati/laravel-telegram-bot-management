@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Http\DTO\Message;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\Message;
 
-use TelegramBot\Services\TelegramBot\DTO\DTO;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\DTO;
 
 class TelegramSimpleMessage extends DTO
 {

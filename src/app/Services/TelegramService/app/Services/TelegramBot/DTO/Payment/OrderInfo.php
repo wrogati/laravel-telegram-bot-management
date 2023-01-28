@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Payment;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Payment;
 
-use TelegramBot\Services\TelegramBot\DTO\Message\ShippingAddress;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\ShippingAddress;
 
 class OrderInfo
 {

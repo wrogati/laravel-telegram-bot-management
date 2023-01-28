@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO;
 
 use ReflectionClass;
 use ReflectionProperty;

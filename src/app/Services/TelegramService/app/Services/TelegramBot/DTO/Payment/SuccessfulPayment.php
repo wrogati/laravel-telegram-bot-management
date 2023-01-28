@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Payment;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Payment;
 
 class SuccessfulPayment
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Passport;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Passport;
 
 class EncryptedPassportElement
 {

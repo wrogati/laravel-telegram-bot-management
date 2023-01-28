@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Contact;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Contact;
 
 class Contact
 {

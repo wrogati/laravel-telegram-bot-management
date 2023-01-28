@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\User;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\User;
 
 /**
  * @see https://core.telegram.org/bots/api#user

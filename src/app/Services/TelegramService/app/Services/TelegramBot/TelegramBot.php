@@ -1,15 +1,15 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot;
+namespace App\Services\TelegramService\app\Services\TelegramBot;
 
-use TelegramBot\Services\TelegramBot\Actions\Bot;
-use TelegramBot\Services\TelegramBot\Actions\Contracts\BotContract;
-use TelegramBot\Services\TelegramBot\Actions\Contracts\BotLocationContract;
-use TelegramBot\Services\TelegramBot\Actions\Contracts\BotMessageContract;
-use TelegramBot\Services\TelegramBot\Actions\Contracts\Location;
-use TelegramBot\Services\TelegramBot\Actions\Message;
-use TelegramBot\Services\TelegramBot\Contracts\TelegramBotServiceContract;
-use TelegramBot\Services\TelegramBot\Http\TelegramClient;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Bot;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotContract;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotLocationContract;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotMessageContract;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\Location;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Message;
+use App\Services\TelegramService\app\Services\TelegramBot\Contracts\TelegramBotServiceContract;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\TelegramClient;
 
 class TelegramBot implements TelegramBotServiceContract
 {

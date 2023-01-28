@@ -1,11 +1,11 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Bot;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Bot;
 
-use TelegramBot\Services\TelegramBot\DTO\Chat\ChatJoinRequest;
-use TelegramBot\Services\TelegramBot\DTO\Message\Message;
-use TelegramBot\Services\TelegramBot\DTO\Message\PreCheckoutQuery;
-use TelegramBot\Services\TelegramBot\DTO\Message\ShippingQuery;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat\ChatJoinRequest;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Message;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\PreCheckoutQuery;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\ShippingQuery;
 
 class Update
 {

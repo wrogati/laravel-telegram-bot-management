@@ -1,22 +1,22 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Actions;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Actions;
 
-use TelegramBot\Helpers\RequestHelper;
-use TelegramBot\Services\TelegramBot\Actions\Contracts\BotMessageContract;
-use TelegramBot\Services\TelegramBot\DTO\Message\AudioUploadResponse;
-use TelegramBot\Services\TelegramBot\DTO\Message\Message as MessageDTO;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\Animation;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\Audio;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\Document;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\MediaGroup\MediaGroup;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\Photo;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\Video;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\VideoNote;
-use TelegramBot\Services\TelegramBot\Http\DTO\File\Voice;
-use TelegramBot\Services\TelegramBot\Http\DTO\Message\TelegramSimpleMessage;
-use TelegramBot\Services\TelegramBot\Http\MessageClient;
-use TelegramBot\Services\TelegramBot\Http\TelegramClient;
+use App\Services\TelegramService\app\Helpers\RequestHelper;
+use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotMessageContract;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\AudioUploadResponse;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Message as MessageDTO;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\Animation;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\Audio;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\Document;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\MediaGroup\MediaGroup;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\Photo;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\Video;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\VideoNote;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File\Voice;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\Message\TelegramSimpleMessage;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\MessageClient;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\TelegramClient;
 
 class Message implements BotMessageContract
 {

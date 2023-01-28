@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Video;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Video;
 
-use TelegramBot\Services\TelegramBot\DTO\Photo\PhotoSize;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Photo\PhotoSize;
 
 class TelegramVideoNote
 {

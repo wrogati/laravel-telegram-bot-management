@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Audio;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Audio;
 
-use TelegramBot\Services\TelegramBot\Contracts\TelegramFileResponseContract;
+use App\Services\TelegramService\app\Services\TelegramBot\Contracts\TelegramFileResponseContract;
 
 class Audio implements TelegramFileResponseContract
 {

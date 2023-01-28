@@ -1,11 +1,11 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Sticker;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Sticker;
 
-use TelegramBot\Services\TelegramBot\DTO\File\File;
-use TelegramBot\Services\TelegramBot\DTO\File\MaskPosition;
-use TelegramBot\Services\TelegramBot\DTO\Message\Animation;
-use TelegramBot\Services\TelegramBot\DTO\Photo\PhotoSize;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\File\File;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\File\MaskPosition;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Animation;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Photo\PhotoSize;
 
 class Sticker
 {

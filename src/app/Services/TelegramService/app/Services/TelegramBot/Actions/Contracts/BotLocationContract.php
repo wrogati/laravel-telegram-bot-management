@@ -1,9 +1,9 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Actions\Contracts;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts;
 
-use TelegramBot\Services\TelegramBot\DTO\Message\Message;
-use TelegramBot\Services\TelegramBot\Http\DTO\Location\Location as LocationDTO;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\Message;
+use App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\Location\Location as LocationDTO;
 
 interface BotLocationContract
 {

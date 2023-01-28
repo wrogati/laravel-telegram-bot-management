@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Chat;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat;
 
-use TelegramBot\Services\TelegramBot\DTO\User\User;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\User\User;
 
 class ChatJoinRequest
 {

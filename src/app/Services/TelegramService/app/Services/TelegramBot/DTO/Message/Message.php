@@ -1,33 +1,33 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Message;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Message;
 
-use TelegramBot\Services\TelegramBot\Dice\TelegramDice;
-use TelegramBot\Services\TelegramBot\DTO\Audio\Audio;
-use TelegramBot\Services\TelegramBot\DTO\Audio\Voice;
-use TelegramBot\Services\TelegramBot\DTO\Bot\Poll;
-use TelegramBot\Services\TelegramBot\DTO\Chat\Chat;
-use TelegramBot\Services\TelegramBot\DTO\Contact\Contact;
-use TelegramBot\Services\TelegramBot\DTO\Document\Document;
-use TelegramBot\Services\TelegramBot\DTO\Forum\ForumTopicClosed;
-use TelegramBot\Services\TelegramBot\DTO\Forum\ForumTopicCreated;
-use TelegramBot\Services\TelegramBot\DTO\Forum\ForumTopicEdited;
-use TelegramBot\Services\TelegramBot\DTO\Game\Game;
-use TelegramBot\Services\TelegramBot\DTO\Passport\Passport;
-use TelegramBot\Services\TelegramBot\DTO\Payment\Invoice;
-use TelegramBot\Services\TelegramBot\DTO\Payment\SuccessfulPayment;
-use TelegramBot\Services\TelegramBot\DTO\Photo\Photo;
-use TelegramBot\Services\TelegramBot\DTO\Photo\PhotoSize;
-use TelegramBot\Services\TelegramBot\DTO\ProximityAlertTriggered;
-use TelegramBot\Services\TelegramBot\DTO\Sticker\Sticker;
-use TelegramBot\Services\TelegramBot\DTO\User\User;
-use TelegramBot\Services\TelegramBot\DTO\Venue\TelegramVenue;
-use TelegramBot\Services\TelegramBot\DTO\Video\Video;
-use TelegramBot\Services\TelegramBot\DTO\Video\TelegramVideoNote;
-use TelegramBot\Services\TelegramBot\DTO\Video\VideoChatEnded;
-use TelegramBot\Services\TelegramBot\DTO\Video\VideoChatParticipantsInvited;
-use TelegramBot\Services\TelegramBot\DTO\Video\VideoChatScheduled;
-use TelegramBot\Services\TelegramBot\DTO\WebAppData;
+use App\Services\TelegramService\app\Services\TelegramBot\Dice\TelegramDice;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Audio\Audio;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Audio\Voice;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Bot\Poll;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat\Chat;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Contact\Contact;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Document\Document;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Forum\ForumTopicClosed;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Forum\ForumTopicCreated;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Forum\ForumTopicEdited;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Game\Game;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Passport\Passport;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Payment\Invoice;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Payment\SuccessfulPayment;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Photo\Photo;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Photo\PhotoSize;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\ProximityAlertTriggered;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Sticker\Sticker;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\User\User;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Venue\TelegramVenue;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Video\Video;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Video\TelegramVideoNote;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Video\VideoChatEnded;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Video\VideoChatParticipantsInvited;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Video\VideoChatScheduled;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\WebAppData;
 
 /**
  * @see https://core.telegram.org/bots/api#message

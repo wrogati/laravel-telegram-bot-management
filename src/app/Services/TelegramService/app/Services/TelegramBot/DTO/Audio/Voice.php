@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Audio;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Audio;
 
-use TelegramBot\Services\TelegramBot\DTO\Photo\PhotoSize;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Photo\PhotoSize;
 
 class Voice
 {

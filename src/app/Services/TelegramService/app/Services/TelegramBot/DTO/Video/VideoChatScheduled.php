@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Video;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Video;
 
 class VideoChatScheduled
 {

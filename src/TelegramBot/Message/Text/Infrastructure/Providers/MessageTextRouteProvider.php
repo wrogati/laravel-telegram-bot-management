@@ -4,6 +4,7 @@ namespace TelegramBot\Message\Text\Infrastructure\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
+use TelegramBot\Shared\Application\Services\TelegramService;
 
 class MessageTextRouteProvider extends RouteServiceProvider
 {
@@ -18,7 +19,10 @@ class MessageTextRouteProvider extends RouteServiceProvider
                 */
                 Route::middleware([])->group(
                     function () {
-                        Route::get('/', fn() => response()->json(['message' => 'works']))->name('send');
+                        Route::get('/', function () {
+                            $s = new TelegramService('abc');
+                            dd($s->bot());
+                        })->name('send');
                     }
                 );
             }

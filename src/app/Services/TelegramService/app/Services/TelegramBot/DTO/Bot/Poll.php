@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Bot;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Bot;
 
-use TelegramBot\Services\TelegramBot\DTO\Message\MessageEntity;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Message\MessageEntity;
 
 class Poll
 {

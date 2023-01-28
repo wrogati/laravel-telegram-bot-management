@@ -1,5 +1,5 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Contracts;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Contracts;
 
 interface TelegramFileResponseContract {}

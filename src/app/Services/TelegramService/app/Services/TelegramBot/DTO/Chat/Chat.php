@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Chat;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat;
 
 /**
  * @see https://core.telegram.org/bots/api#chat

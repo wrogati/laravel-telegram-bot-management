@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Dice;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Dice;
 
 class TelegramDice
 {

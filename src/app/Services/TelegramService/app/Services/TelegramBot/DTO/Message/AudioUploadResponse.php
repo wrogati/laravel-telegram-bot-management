@@ -1,11 +1,11 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\DTO\Message;
+namespace App\Services\TelegramService\app\Services\TelegramBot\DTO\Message;
 
-use TelegramBot\Services\TelegramBot\Contracts\TelegramFileResponseContract;
-use TelegramBot\Services\TelegramBot\DTO\Audio\Audio;
-use TelegramBot\Services\TelegramBot\DTO\Chat\Chat;
-use TelegramBot\Services\TelegramBot\DTO\User\User;
+use App\Services\TelegramService\app\Services\TelegramBot\Contracts\TelegramFileResponseContract;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Audio\Audio;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\Chat\Chat;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\User\User;
 
 class AudioUploadResponse
 {

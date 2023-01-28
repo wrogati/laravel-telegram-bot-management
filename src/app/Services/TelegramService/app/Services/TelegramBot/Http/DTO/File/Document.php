@@ -1,8 +1,8 @@
 <?php
 
-namespace TelegramBot\Services\TelegramBot\Http\DTO\File;
+namespace App\Services\TelegramService\app\Services\TelegramBot\Http\DTO\File;
 
-use TelegramBot\Services\TelegramBot\DTO\DTO;
+use App\Services\TelegramService\app\Services\TelegramBot\DTO\DTO;
 
 class Document extends DTO
 {
@@ -16,7 +16,7 @@ class Document extends DTO
     public ?bool $protectContent = null;
     public ?int $replyToMessageId = null;
     public ?bool $allowSendingWithoutReply = null;
-    
+
     public function __construct(
         public readonly string $chatId,
         public readonly mixed  $document
@@ -27,56 +27,56 @@ class Document extends DTO
     public function setMessageThreadId(string $value): self
     {
         $this->messageThreadId = $value;
-        
+
         return $this;
     }
 
     public function setThumb(mixed $value): self
     {
         $this->thumb = $value;
-        
+
         return $this;
     }
 
     public function setCaption(string $value): self
     {
         $this->caption = $value;
-        
+
         return $this;
     }
 
     public function setParseMode(string $value): self
     {
         $this->parseMode = $value;
-        
+
         return $this;
     }
 
     public function setCaptionEntities(array $values): self
     {
         $this->captionEntities = $values;
-        
+
         return $this;
     }
 
     public function setDisableContentTypeDection(bool $value): self
     {
         $this->disableContentTypeDection = $value;
-        
+
         return $this;
     }
 
     public function setDisableNotification(bool $value): self
     {
         $this->disbleNotification = $value;
-        
+
         return $this;
     }
 
     public function setProtectContent(bool $value): self
     {
         $this->protectContent = $value;
-        
+
         return $this;
     }
 
