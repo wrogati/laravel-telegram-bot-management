@@ -3,6 +3,7 @@
 namespace Tests\Unit\User\Actions;
 
 use App\Models\User;
+use Exception;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use TelegramBot\User\Application\Actions\Update;
@@ -18,24 +19,12 @@ class UpdateTest extends TestCase
      */
     public function testSuccess()
     {
-        $userModelStub = $this->getMockBuilder(User::class)
-            ->setMethods(['findOrFail', 'update'])
-            ->getMock();
-
         $updateMock = Mockery::mock(Update::class);
         $userRepositoryMock = Mockery::mock(UserRepository::class);
 
         $userExpected = Provider::userExpected();
         $payloadExpected = Provider::successPayloadExpected();
         $id = Provider::id();
-
-        $userModelStub->method('findOrFail')
-            ->with($id)
-            ->willReturn($userExpected);
-
-        $userModelStub->method('update')
-            ->with($payloadExpected)
-            ->willReturn(true);
 
         $updateMock->shouldReceive('handle')
             ->once()
@@ -51,6 +40,22 @@ class UpdateTest extends TestCase
             ->once()
             ->with($userExpected, Provider::dtoExptected())
             ->andReturnTrue();
+
+        $updateMock->handle($id, $payloadExpected);
+    }
+
+    public function testFail()
+    {
+        $this->expectException(Exception::class);
+
+        $updateMock = Mockery::mock(Update::class);
+        $payloadExpected = Provider::failPayloadExpected();
+        $id = Provider::id();
+
+        $updateMock->shouldReceive('handle')
+            ->once()
+            ->with($id, $payloadExpected)
+            ->andThrow(Exception::class);
 
         $updateMock->handle($id, $payloadExpected);
     }
