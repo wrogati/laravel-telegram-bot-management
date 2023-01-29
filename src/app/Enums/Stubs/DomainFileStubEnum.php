@@ -5,6 +5,7 @@ namespace App\Enums\Stubs;
 enum DomainFileStubEnum
 {
     case DOMAIN;
+    case REQUEST;
     case ROUTE;
     case SERVICE;
 
@@ -14,6 +15,7 @@ enum DomainFileStubEnum
 
         return match ($this) {
             self::DOMAIN => file_get_contents(sprintf('%s/%s', $basePath, 'Domain.stub')),
+            self::REQUEST => file_get_contents(sprintf('%s/%s', $basePath, 'Request.stub')),
             self::ROUTE => file_get_contents(sprintf('%s/%s', $basePath, 'DomainRouteProvider.stub')),
             self::SERVICE => file_get_contents(sprintf('%s/%s', $basePath, 'DomainServiceProvider.stub')),
         };
