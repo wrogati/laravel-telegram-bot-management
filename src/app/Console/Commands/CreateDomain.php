@@ -12,20 +12,25 @@ class CreateDomain extends Command
 
     protected $description = 'Create a new domain';
 
+    public function __construct(private readonly DomainService $service)
+    {
+        parent::__construct();
+    }
+
     /**
      * @throws Exception
      */
-    public function handle(DomainService $service): int
+    public function handle(): int
     {
         $action = $this->argument('action');
         $domainName = $this->argument('domain');
         $file = $this->argument('file');
 
         try {
-            $domainPath = match ($action) {
-                'new' => $service->newDomain(ucfirst((string)$domainName)),
-                'new-request' => $this->createRequest($service, $domainName, $file),
-                'new-controller' => $this->createController($service, $domainName, $file),
+            $response = match ($action) {
+                'new' => ['action' => 'Domain', 'path' => $this->service->newDomain(ucfirst((string)$domainName))],
+                'new-request' => ['action' => 'Request', 'path' => $this->createRequest($domainName, $file)],
+                'new-controller' => ['action' => 'Controller', 'path' => $this->createController($domainName, $file)],
                 default => throw new Exception('Invalid action for domain.')
             };
         } catch (Exception $exception) {
@@ -34,13 +39,7 @@ class CreateDomain extends Command
             return Command::FAILURE;
         }
 
-        $action = match ($action) {
-            'new' => 'Domain',
-            'new-request' => 'Request',
-            'new-controller' => 'Controller',
-        };
-
-        $this->info(sprintf('%s created in: %s.', $action, $domainPath));
+        $this->info(sprintf('%s created in: %s.', $response['action'], $response['path']));
 
         return Command::SUCCESS;
     }
@@ -48,21 +47,21 @@ class CreateDomain extends Command
     /**
      * @throws Exception
      */
-    public function createRequest(DomainService $service, string $domainName, ?string $file): string
+    public function createRequest(string $domainName, ?string $file): string
     {
         $this->checkIfIsValidFileName($file);
 
-        return $service->newRequest(ucfirst($domainName), $file);
+        return $this->service->newRequest(ucfirst($domainName), $file);
     }
 
     /**
      * @throws Exception
      */
-    public function createController(DomainService $service, string $domainName, ?string $file): string
+    public function createController(string $domainName, ?string $file): string
     {
         $this->checkIfIsValidFileName($file);
 
-        return $service->newController(ucfirst($domainName), $file);
+        return $this->service->newController(ucfirst($domainName), $file);
     }
 
     /**
