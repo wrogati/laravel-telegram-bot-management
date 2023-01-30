@@ -39,7 +39,7 @@ class CreateDomain extends Command
             return Command::FAILURE;
         }
 
-        $this->info(sprintf('%s created in: %s.', $response['action'], $response['path']));
+        $this->info(sprintf('%s created in: %s', $response['action'], $response['path']));
 
         return Command::SUCCESS;
     }

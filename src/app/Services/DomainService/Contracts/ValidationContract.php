@@ -4,7 +4,7 @@ namespace App\Services\DomainService\Contracts;
 
 use Closure;
 
-interface ValidationContracts
+interface ValidationContract
 {
     public function handle(mixed $content, Closure $next);
 }

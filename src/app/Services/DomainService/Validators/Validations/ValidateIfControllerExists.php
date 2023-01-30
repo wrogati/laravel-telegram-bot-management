@@ -2,19 +2,20 @@
 
 namespace App\Services\DomainService\Validators\Validations;
 
-use App\Exceptions\Domain\DomainExistsException;
+use App\Exceptions\Domain\ControllerExistsException;
 use App\Services\DomainService\Contracts\ValidationContract;
 use Closure;
 
-class ValidateIfDomainExists implements ValidationContract
+class ValidateIfControllerExists implements ValidationContract
 {
+
     /**
-     * @throws DomainExistsException
+     * @throws ControllerExistsException
      */
     public function handle(mixed $content, Closure $next)
     {
         if (file_exists($content))
-            throw new DomainExistsException();
+            throw new ControllerExistsException();
 
         return $next($content);
     }

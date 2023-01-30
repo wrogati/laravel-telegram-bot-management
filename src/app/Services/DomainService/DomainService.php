@@ -3,6 +3,7 @@
 namespace App\Services\DomainService;
 
 use App\Exceptions\Domain\DomainExistsException;
+use App\Services\DomainService\Actions\NewController;
 use App\Services\DomainService\Actions\NewDomain;
 use App\Services\DomainService\Actions\NewRequest;
 use App\Services\DomainService\Contracts\DomainServiceContract;
@@ -11,7 +12,8 @@ class DomainService implements DomainServiceContract
 {
     public function __construct(
         private readonly NewDomain $newDomain,
-        private readonly NewRequest $newRequest
+        private readonly NewRequest $newRequest,
+        private readonly NewController $newController
     )
     {
     }
@@ -29,8 +31,8 @@ class DomainService implements DomainServiceContract
         return $this->newRequest->handle($domain, $file);
     }
 
-    public function newController(string $domain, string $name): string
+    public function newController(string $domain, string $file): string
     {
-        // TODO: Implement newController() method.
+        return $this->newController->handle($domain, $file);
     }
 }
