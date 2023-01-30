@@ -1,0 +1,12 @@
+<?php
+
+namespace TelegramBot\{{domain}}\Presentation\Controllers;
+
+use App\Http\Controllers\Controller;
+
+class {{file}} extends Controller
+{
+    public function __construct()
+    {
+    }
+}

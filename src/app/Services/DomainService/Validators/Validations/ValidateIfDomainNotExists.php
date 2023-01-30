@@ -3,10 +3,10 @@
 namespace App\Services\DomainService\Validators\Validations;
 
 use App\Exceptions\Domain\DomainExistsNotException;
-use App\Services\DomainService\Contracts\ValidationContracts;
+use App\Services\DomainService\Contracts\ValidationContract;
 use Closure;
 
-class ValidateIfDomainNotExists implements ValidationContracts
+class ValidateIfDomainNotExists implements ValidationContract
 {
     /**
      * @throws DomainExistsNotException

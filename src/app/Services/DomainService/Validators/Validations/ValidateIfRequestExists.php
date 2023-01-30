@@ -3,10 +3,10 @@
 namespace App\Services\DomainService\Validators\Validations;
 
 use App\Exceptions\Domain\RequestExistsException;
-use App\Services\DomainService\Contracts\ValidationContracts;
+use App\Services\DomainService\Contracts\ValidationContract;
 use Closure;
 
-class ValidateIfRequestExists implements ValidationContracts
+class ValidateIfRequestExists implements ValidationContract
 {
 
     /**
