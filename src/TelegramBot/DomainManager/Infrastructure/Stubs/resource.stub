@@ -1,0 +1,17 @@
+<?php
+
+namespace TelegramBot\{{domain}}\Presentation\Resources;
+
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class {{domain}} extends JsonResource
+{
+    /**
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     */
+    public function toArray($request): array
+    {
+        return parent::toArray($request);
+    }
+}

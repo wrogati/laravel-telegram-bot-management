@@ -29,9 +29,7 @@
             "TelegramBot\\": "TelegramBot/"
         },
         "files": [
-            "app/Services/TelegramService/helpers/config.php",
-            "app/Services/TelegramService/helpers/singleton.php",
-            "app/Services/TelegramService/helpers/string.php"
+            "helpers/domain-path.php"
         ]
     },
     "autoload-dev": {
