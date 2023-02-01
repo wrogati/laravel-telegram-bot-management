@@ -1,0 +1,22 @@
+<?php
+
+namespace TelegramBot\{{domain}}\Infrastructure\Providers;
+
+use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
+use Illuminate\Support\Facades\Route;
+
+class {{domain}}RouteProvider extends RouteServiceProvider
+{
+    public function map(): void
+    {
+        Route::prefix('')->name('')->group(
+            function () {
+                Route::middleware([/* adicionar middlewares */])->group(
+                    function () {
+                        /* Adicionar rotas */
+                    }
+                );
+            }
+        );
+    }
+}
