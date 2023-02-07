@@ -27,7 +27,7 @@ class DomainMaker extends Maker
 
         $this->createDomain($domainName);
 
-        return $this->genereteResponse(Storage::disk('truckpag')->path($domainName));
+        return $this->genereteResponse(Storage::disk('telegrambot')->path($domainName));
     }
 
     private function validateDomain(string $domainName): void
@@ -53,9 +53,9 @@ class DomainMaker extends Maker
 
     private function criarArquivo(string $domainName, string $fileName, StubEnum $enum): void
     {
-        $substituirDTO = new ReplacerDTO($enum->stub(), ['dominio' => $domainName]);
+        $dto = new ReplacerDTO($enum->stub(), ['domain' => $domainName]);
 
-        $content = $this->replacer->handle($substituirDTO);
+        $content = $this->replacer->handle($dto);
 
         Storage::disk('telegrambot')->put(sprintf('%s/%s', $domainName, $fileName), $content);
     }

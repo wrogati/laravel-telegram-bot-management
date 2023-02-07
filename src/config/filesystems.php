@@ -30,6 +30,12 @@ return [
 
     'disks' => [
 
+        'telegrambot' => [
+            'driver' => 'local',
+            'root' => base_path('TelegramBot'),
+            'throw' => false,
+        ],
+
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

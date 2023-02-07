@@ -5,7 +5,6 @@ namespace TelegramBot\Shared\Infrastructure\Providers;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
-use TelegramBot\Shared\Application\Services\TelegramService;
 
 class SharedRouteProvider extends RouteServiceProvider
 {
@@ -20,7 +19,7 @@ class SharedRouteProvider extends RouteServiceProvider
                 */
                 Route::middleware([/* input middlewares */])->group(
                     function () {
-                        Route::get('/', fn() => response()->json(['message' => 'bot on!'], Response::HTTP_OK))
+                        Route::get('/', fn() => response()->json(['message' => 'api on!'], Response::HTTP_OK))
                             ->name('health-check');
                     }
                 );
