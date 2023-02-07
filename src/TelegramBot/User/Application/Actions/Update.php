@@ -2,11 +2,10 @@
 
 namespace TelegramBot\User\Application\Actions;
 
-use App\Models\User;
 use Illuminate\Support\Fluent;
 use TelegramBot\User\Domain\DTO\UserUpdateDTO;
-use TelegramBot\User\Domain\Exceptions\UserNotUpdatedException;
 use TelegramBot\User\Domain\Repository\UserRepository;
+use TelegramBot\User\Infrastructure\Exceptions\UserNotUpdatedException;
 
 class Update
 {

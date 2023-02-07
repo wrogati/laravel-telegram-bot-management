@@ -13,4 +13,8 @@ interface UserRepository
     public function update(User $user, UserUpdateDTO $dto): bool;
 
     public function getById(string $id): User;
+
+    public function inactivate(User $user): bool;
+
+    public function activate(User $user): bool;
 }

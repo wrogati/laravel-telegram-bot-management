@@ -5,7 +5,7 @@ namespace TelegramBot\User\Presentation\Controllers\CRUD;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use TelegramBot\User\Application\Actions\Update;
-use TelegramBot\User\Domain\Exceptions\UserNotUpdatedException;
+use TelegramBot\User\Infrastructure\Exceptions\UserNotUpdatedException;
 use TelegramBot\User\Presentation\Requests\UserUpdateRequest;
 
 class UserUpdateController extends Controller

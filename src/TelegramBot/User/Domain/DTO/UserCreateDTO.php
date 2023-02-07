@@ -10,7 +10,8 @@ class UserCreateDTO extends DTO
         public readonly string $firstName,
         public readonly string $lastName,
         public readonly string $email,
-        public readonly string $password
+        public readonly string $password,
+        private readonly bool $active = true
     )
     {
     }
