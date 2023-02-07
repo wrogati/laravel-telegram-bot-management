@@ -5,27 +5,27 @@ namespace Tests\Unit\User\Actions;
 use Exception;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use TelegramBot\User\Application\Actions\Inactivate;
 use TelegramBot\User\Application\Actions\Update;
 use TelegramBot\User\Domain\Repository\UserRepository;
-use Tests\Providers\User\UserUpdateProvider as Provider;
+use Tests\Providers\User\UserInactivateProvider as Provider;
 
-class UpdateTest extends TestCase
+class InactivateTest extends TestCase
 {
     /**
      * @doesNotPerformAssertions
      */
     public function testSuccess()
     {
-        $updateMock = Mockery::mock(Update::class);
+        $inactivateMock = Mockery::mock(Inactivate::class);
         $userRepositoryMock = Mockery::mock(UserRepository::class);
 
         $userExpected = Provider::userExpected();
-        $payloadExpected = Provider::successPayloadExpected();
         $id = Provider::id();
 
-        $updateMock->shouldReceive('handle')
+        $inactivateMock->shouldReceive('handle')
             ->once()
-            ->with($id, $payloadExpected)
+            ->with($id)
             ->andReturn();
 
         $userRepositoryMock->shouldReceive('getById')
@@ -35,25 +35,24 @@ class UpdateTest extends TestCase
 
         $userRepositoryMock->shouldReceive('update')
             ->once()
-            ->with($userExpected, Provider::dtoExptected())
+            ->with($userExpected)
             ->andReturnTrue();
 
-        $updateMock->handle($id, $payloadExpected);
+        $inactivateMock->handle($id);
     }
 
     public function testFail()
     {
         $this->expectException(Exception::class);
 
-        $updateMock = Mockery::mock(Update::class);
-        $payloadExpected = Provider::failPayloadExpected();
+        $inactivateMock = Mockery::mock(Inactivate::class);
         $id = Provider::id();
 
-        $updateMock->shouldReceive('handle')
+        $inactivateMock->shouldReceive('handle')
             ->once()
-            ->with($id, $payloadExpected)
+            ->with($id)
             ->andThrow(Exception::class);
 
-        $updateMock->handle($id, $payloadExpected);
+        $inactivateMock->handle($id);
     }
 }

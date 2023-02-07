@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\User\Domain\Exceptions;
+namespace TelegramBot\User\Infrastructure\Exceptions;
 
 use Exception;
 

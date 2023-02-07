@@ -32,4 +32,14 @@ class UserEloquentRepository implements UserRepository
             ->newQuery()
             ->findOrFail(new ObjectId($id));
     }
+
+    public function inactivate(User $user): bool
+    {
+        return $user->update(['active' => false]);
+    }
+
+    public function activate(User $user): bool
+    {
+        return $user->update(['active' => true]);
+    }
 }
