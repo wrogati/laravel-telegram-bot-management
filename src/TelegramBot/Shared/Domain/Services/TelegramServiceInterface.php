@@ -3,15 +3,15 @@
 namespace TelegramBot\Shared\Domain\Services;
 
 
-use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotContract;
-use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotLocationContract;
-use App\Services\TelegramService\app\Services\TelegramBot\Actions\Contracts\BotMessageContract;
+use App\Services\TelegramService\app\Contracts\BotContract;
+use App\Services\TelegramService\app\Contracts\LocationContract;
+use App\Services\TelegramService\app\Contracts\MessageContract;
 
 interface TelegramServiceInterface
 {
     public function bot(): BotContract;
 
-    public function message(): BotMessageContract;
+    public function message(): MessageContract;
 
-    public function location(): BotLocationContract;
+    public function location(): LocationContract;
 }

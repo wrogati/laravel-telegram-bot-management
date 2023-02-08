@@ -5,7 +5,6 @@ namespace TelegramBot\Shared\Infrastructure\Providers;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Response;
-use TelegramBot\Shared\Application\Services\TelegramService;
 
 class SharedRouteProvider extends RouteServiceProvider
 {
