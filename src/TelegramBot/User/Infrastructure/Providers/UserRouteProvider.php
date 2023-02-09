@@ -5,6 +5,8 @@ namespace TelegramBot\User\Infrastructure\Providers;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 use TelegramBot\User\Presentation\Controllers\ActiveUserController;
+use TelegramBot\User\Presentation\Controllers\Bot\BotStoreController;
+use TelegramBot\User\Presentation\Controllers\Bot\IndexBotByUserController;
 use TelegramBot\User\Presentation\Controllers\CRUD\UserShowController;
 use TelegramBot\User\Presentation\Controllers\CRUD\UserStoreController;
 use TelegramBot\User\Presentation\Controllers\CRUD\UserUpdateController;
@@ -24,6 +26,11 @@ class UserRouteProvider extends RouteServiceProvider
                             Route::patch('', UserUpdateController::class)->name('update');
                             Route::get('inactive', InactiveUserController::class)->name('inactivate');
                             Route::get('activate', ActiveUserController::class)->name('activate');
+
+                            Route::group(['prefix' => 'bot'], function () {
+                                Route::post('', BotStoreController::class);
+                                Route::get('', IndexBotByUserController::class);
+                            });
                         });
                     });
             });

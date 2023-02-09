@@ -32,7 +32,7 @@ abstract class Maker
         $dto = new ValidatorDTO([
             'class'         => $class,
             'domain'        => $domainName,
-            'path' => $this->enum->path($domainName)
+            'path' => sprintf('%s/%s.php', $this->enum->path($domainName), $class)
         ]);
 
         $this->validator->handle($dto);

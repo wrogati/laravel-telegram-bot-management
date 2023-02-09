@@ -6,7 +6,7 @@ use App\Models\User;
 use MongoDB\BSON\ObjectId;
 use TelegramBot\User\Domain\DTO\UserCreateDTO;
 use TelegramBot\User\Domain\DTO\UserUpdateDTO;
-use TelegramBot\User\Domain\Repository\UserRepository;
+use TelegramBot\User\Domain\Repositories\UserRepository;
 
 class UserEloquentRepository implements UserRepository
 {

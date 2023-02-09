@@ -89,7 +89,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Session Cache Store
+    | Session Cache BotStore
     |--------------------------------------------------------------------------
     |
     | While using one of the framework's cache driven session backends you may

@@ -6,7 +6,7 @@ use Exception;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use TelegramBot\User\Application\Actions\Update;
-use TelegramBot\User\Domain\Repository\UserRepository;
+use TelegramBot\User\Domain\Repositories\UserRepository;
 use Tests\Providers\User\UserUpdateProvider as Provider;
 
 class UpdateTest extends TestCase

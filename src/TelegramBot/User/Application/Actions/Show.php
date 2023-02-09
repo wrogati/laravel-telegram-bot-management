@@ -3,7 +3,7 @@
 namespace TelegramBot\User\Application\Actions;
 
 use App\Models\User;
-use TelegramBot\User\Domain\Repository\UserRepository;
+use TelegramBot\User\Domain\Repositories\UserRepository;
 
 class Show
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace TelegramBot\{{domain}}\Presentation\Resources;
+namespace TelegramBot\User\Presentation\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class {{class}} extends JsonResource
+class BotResource extends JsonResource
 {
     /**
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
@@ -12,6 +12,8 @@ class {{class}} extends JsonResource
      */
     public function toArray($request): array
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->_id,
+        ];
     }
 }

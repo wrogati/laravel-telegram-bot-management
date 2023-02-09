@@ -4,7 +4,7 @@ namespace TelegramBot\{{domain}}\Presentation\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class {{domain}} extends FormRequest
+class {{class}} extends FormRequest
 {
     public function authorize(): bool
     {

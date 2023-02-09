@@ -7,7 +7,7 @@ use Exception;
 use Mockery;
 use Tests\TestCase;
 use TelegramBot\User\Application\Actions\Show;
-use TelegramBot\User\Domain\Repository\UserRepository;
+use TelegramBot\User\Domain\Repositories\UserRepository;
 use Tests\Providers\User\UserShowProvider as Provider;
 
 class ShowTest extends TestCase

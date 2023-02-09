@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\User\Domain\Repository;
+namespace TelegramBot\User\Domain\Repositories;
 
 use App\Models\User;
 use TelegramBot\User\Domain\DTO\UserCreateDTO;

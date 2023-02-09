@@ -7,6 +7,8 @@ use App\Services\TelegramService\TelegramBot;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 use TelegramBot\Shared\Application\TelegramService;
+use TelegramBot\Shared\Domain\Repositories\BotRepository;
+use TelegramBot\Shared\Infrastructure\Repositories\BotEloquentRepository;
 
 class SharedServiceProvider extends ServiceProvider
 {
@@ -25,5 +27,6 @@ class SharedServiceProvider extends ServiceProvider
             return $telegramService->message();
         });
 
+        app()->bind(BotRepository::class, fn() => app(BotEloquentRepository::class));
     }
 }

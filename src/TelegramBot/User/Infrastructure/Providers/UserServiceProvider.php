@@ -3,7 +3,7 @@
 namespace TelegramBot\User\Infrastructure\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use TelegramBot\User\Domain\Repository\UserRepository;
+use TelegramBot\User\Domain\Repositories\UserRepository;
 use TelegramBot\User\Infrastructure\Repository\UserEloquentRepository;
 
 class UserServiceProvider extends ServiceProvider
