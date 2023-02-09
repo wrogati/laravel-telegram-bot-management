@@ -5,9 +5,8 @@ namespace Tests\Unit\User\Actions;
 use Exception;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Application\Actions\Inactivate;
-use TelegramBot\User\Application\Actions\Update;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 use Tests\Providers\User\UserInactivateProvider as Provider;
 
 class InactivateTest extends TestCase

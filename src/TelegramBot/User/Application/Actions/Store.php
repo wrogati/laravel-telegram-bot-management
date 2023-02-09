@@ -4,8 +4,8 @@ namespace TelegramBot\User\Application\Actions;
 
 use App\Models\User;
 use Illuminate\Support\Fluent;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Domain\DTO\UserCreateDTO;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 
 class Store
 {

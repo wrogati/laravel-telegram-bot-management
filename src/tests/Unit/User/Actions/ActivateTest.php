@@ -5,8 +5,8 @@ namespace Tests\Unit\User\Actions;
 use Exception;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Application\Actions\Activate;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 use Tests\Providers\User\UserActivateProvider as Provider;
 
 class ActivateTest extends TestCase

@@ -213,4 +213,5 @@ return [
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
+    'ttl_session' => env('TTL_SESSION', 5)
 ];

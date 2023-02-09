@@ -2,8 +2,7 @@
 
 namespace TelegramBot\User\Application\Actions;
 
-use App\Models\User;
-use TelegramBot\User\Domain\Repositories\UserRepository;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Infrastructure\Exceptions\UserNotActivatedException;
 
 class Activate

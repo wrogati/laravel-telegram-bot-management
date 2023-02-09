@@ -1,6 +1,6 @@
 <?php
 
-namespace TelegramBot\User\Domain\Repositories;
+namespace TelegramBot\Shared\Domain\Repositories;
 
 use App\Models\User;
 use TelegramBot\User\Domain\DTO\UserCreateDTO;
@@ -17,4 +17,6 @@ interface UserRepository
     public function inactivate(User $user): bool;
 
     public function activate(User $user): bool;
+
+    public function getByEmail(string $email): User;
 }

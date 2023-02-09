@@ -1,5 +1,5 @@
 <?php
 
 return [
-    TelegramBot\User\Domain\Repositories\UserRepository::class => TelegramBot\User\Infrastructure\Repository\UserEloquentRepository::class,
+    \TelegramBot\Shared\Domain\Repositories\UserRepository::class => \TelegramBot\Shared\Infrastructure\Repositories\UserEloquentRepository::class,
 ];

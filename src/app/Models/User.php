@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Relationships\UserRelationships;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Support\Facades\Hash;
@@ -10,7 +11,7 @@ use Jenssegers\Mongodb\Eloquent\SoftDeletes;
 
 class User extends Model
 {
-    use  HasFactory, SoftDeletes;
+    use  HasFactory, SoftDeletes, UserRelationships;
 
     protected $connection = 'mongodb';
 

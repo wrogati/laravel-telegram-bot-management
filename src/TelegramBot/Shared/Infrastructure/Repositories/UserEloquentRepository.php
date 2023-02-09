@@ -1,12 +1,12 @@
 <?php
 
-namespace TelegramBot\User\Infrastructure\Repository;
+namespace TelegramBot\Shared\Infrastructure\Repositories;
 
 use App\Models\User;
 use MongoDB\BSON\ObjectId;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Domain\DTO\UserCreateDTO;
 use TelegramBot\User\Domain\DTO\UserUpdateDTO;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 
 class UserEloquentRepository implements UserRepository
 {
@@ -41,5 +41,13 @@ class UserEloquentRepository implements UserRepository
     public function activate(User $user): bool
     {
         return $user->update(['active' => true]);
+    }
+
+    public function getByEmail(string $email): User
+    {
+        return $this->model
+            ->newQuery()
+            ->where('email', $email)
+            ->firstOrFail();
     }
 }

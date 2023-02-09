@@ -2,13 +2,11 @@
 
 namespace Tests\Unit\User\Actions;
 
-use App\Models\User;
 use Exception;
 use Mockery;
-use Tests\TestCase;
 use TelegramBot\User\Application\Actions\Show;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 use Tests\Providers\User\UserShowProvider as Provider;
+use Tests\TestCase;
 
 class ShowTest extends TestCase
 {

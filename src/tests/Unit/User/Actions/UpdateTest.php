@@ -5,8 +5,8 @@ namespace Tests\Unit\User\Actions;
 use Exception;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Application\Actions\Update;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 use Tests\Providers\User\UserUpdateProvider as Provider;
 
 class UpdateTest extends TestCase

@@ -6,8 +6,8 @@ use Exception;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Mockery;
 use PHPUnit\Framework\TestCase;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Application\Actions\Store;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 use Tests\Providers\User\UserStoreProvider as Provider;
 
 class StoreTest extends TestCase

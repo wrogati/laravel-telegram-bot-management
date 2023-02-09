@@ -3,8 +3,8 @@
 namespace TelegramBot\User\Application\Actions;
 
 use Illuminate\Support\Fluent;
+use TelegramBot\Shared\Domain\Repositories\UserRepository;
 use TelegramBot\User\Domain\DTO\UserUpdateDTO;
-use TelegramBot\User\Domain\Repositories\UserRepository;
 use TelegramBot\User\Infrastructure\Exceptions\UserNotUpdatedException;
 
 class Update
