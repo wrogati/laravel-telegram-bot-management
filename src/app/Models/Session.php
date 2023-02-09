@@ -15,7 +15,7 @@ class Session extends Model
 
     protected $fillable = [
         'user_id',
-        'auth-secure-token',
+        'auth_secure_token',
         'expires_in',
         'disabled_at',
         'disabled_by_session_id',

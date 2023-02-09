@@ -9,4 +9,6 @@ use TelegramBot\Auth\Domain\DTO\SessionStoreDTO;
 interface SessionRepository
 {
     public function store(User $user, SessionStoreDTO $dto): Session;
+
+    public function getByAuthSecureToken(string $authSecureToken): ?Session;
 }

@@ -17,4 +17,12 @@ class SessionEloquentRepository implements SessionRepository
     {
         return $user->session()->create($dto->toArray(true));
     }
+
+    public function getByAuthSecureToken(string $authSecureToken): ?Session
+    {
+        return $this->model
+            ->newQuery()
+            ->where('auth_secure_token', $authSecureToken)
+            ->first();
+    }
 }

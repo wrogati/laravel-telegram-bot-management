@@ -13,7 +13,7 @@ class BotRouteProvider extends RouteServiceProvider
     {
         Route::prefix('bot')->name('bot.')->group(
             function () {
-                Route::middleware([/* adicionar middlewares */])->group(
+                Route::middleware(['auth'])->group(
                     function () {
                         Route::get('', IndexController::class);
                         Route::group(['prefix' => '{botId}'], function () {

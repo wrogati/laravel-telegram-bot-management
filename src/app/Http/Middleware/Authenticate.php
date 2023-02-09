@@ -2,20 +2,42 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use App\Exceptions\InvalidSessionException;
+use App\Models\Session;
+use Closure;
+use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
+use TelegramBot\Auth\Domain\Repositories\SessionRepository;
 
-class Authenticate extends Middleware
+class Authenticate
 {
     /**
-     * Get the path the user should be redirected to when they are not authenticated.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return string|null
+     * @throws InvalidSessionException
      */
-    protected function redirectTo($request)
+    public function handle(Request $request, Closure $next)
     {
-        if (! $request->expectsJson()) {
-            return route('login');
-        }
+        $authSecureCode = $request->header('auth-secure-token');
+
+        if (empty($authSecureCode))
+            throw new InvalidSessionException();
+
+        $session = $this->getSession($authSecureCode);
+        if (empty($session))
+            throw new InvalidSessionException();
+
+         if ($this->isInvalidSession($session))
+             throw new InvalidSessionException();
+
+        return $next($request);
+    }
+
+    public function getSession(string $authSecureCode): ?Session
+    {
+        return (app(SessionRepository::class))->getByAuthSecureToken($authSecureCode);
+    }
+
+    private function isInvalidSession(Session $session): bool
+    {
+        return Carbon::parse($session->getAttribute('expires_in'))->lessThan(Carbon::now());
     }
 }

@@ -33,7 +33,7 @@ class Login
         $dto = new SessionStoreDTO(
             Str::uuid()->toString(),
             Carbon::now()
-                ->addHours(config('app.ttl_session'))
+                ->addSeconds(300)
                 ->format('Y-m-d H:i:s')
         );
 
