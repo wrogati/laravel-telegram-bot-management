@@ -12,4 +12,6 @@ interface BotRepository
     public function store(BotStoreDTO $dto): Bot;
 
     public function getBotsByUserId(string $userId, ?int $page, ?int $perPage, ?OrdinationDTO $ordination): LengthAwarePaginator;
+
+    public function index(?int $page, ?int $perPage, ?OrdinationDTO $ordination): LengthAwarePaginator;
 }

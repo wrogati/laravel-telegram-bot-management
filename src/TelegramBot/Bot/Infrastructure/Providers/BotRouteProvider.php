@@ -4,7 +4,7 @@ namespace TelegramBot\Bot\Infrastructure\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
-use TelegramBot\User\Presentation\Controllers\Bot\BotStoreController;
+use TelegramBot\Bot\Presentation\Controllers\IndexController;
 
 class BotRouteProvider extends RouteServiceProvider
 {
@@ -14,7 +14,7 @@ class BotRouteProvider extends RouteServiceProvider
             function () {
                 Route::middleware([/* adicionar middlewares */])->group(
                     function () {
-                        Route::post('{userId}', BotStoreController::class);
+                        Route::get('', IndexController::class);
                     }
                 );
             }

@@ -29,7 +29,18 @@ class BotEloquentRepository implements BotRepository
             ->where('created_by', $userId)
             ->when(
                 !is_null($ordination),
-                fn (Builder$query) => $query->orderBy($ordination->column, $ordination->direction)
+                fn (Builder $query) => $query->orderBy($ordination->column, $ordination->direction)
+            )
+            ->paginate(perPage: $perPage ?? 10, page: $page ?? 1);
+    }
+
+    public function index(?int $page, ?int $perPage, ?OrdinationDTO $ordination): LengthAwarePaginator
+    {
+        return $this->model
+            ->newQuery()
+            ->when(
+                !is_null($ordination),
+                fn (Builder $query) => $query->orderBy($ordination->column, $ordination->direction)
             )
             ->paginate(perPage: $perPage ?? 10, page: $page ?? 1);
     }
