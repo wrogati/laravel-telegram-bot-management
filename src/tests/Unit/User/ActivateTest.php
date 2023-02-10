@@ -1,31 +1,30 @@
 <?php
 
-namespace Tests\Unit\User\Actions;
+namespace Tests\Unit\User;
 
 use Exception;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 use TelegramBot\Shared\Domain\Repositories\UserRepository;
-use TelegramBot\User\Application\Actions\Update;
-use Tests\Providers\User\UserUpdateProvider as Provider;
+use TelegramBot\User\Application\Actions\Activate;
+use Tests\Providers\User\UserActivateProvider as Provider;
 
-class UpdateTest extends TestCase
+class ActivateTest extends TestCase
 {
     /**
      * @doesNotPerformAssertions
      */
     public function testSuccess()
     {
-        $updateMock = Mockery::mock(Update::class);
+        $activateMock = Mockery::mock(Activate::class);
         $userRepositoryMock = Mockery::mock(UserRepository::class);
 
         $userExpected = Provider::userExpected();
-        $payloadExpected = Provider::successPayloadExpected();
         $id = Provider::id();
 
-        $updateMock->shouldReceive('handle')
+        $activateMock->shouldReceive('handle')
             ->once()
-            ->with($id, $payloadExpected)
+            ->with($id)
             ->andReturn();
 
         $userRepositoryMock->shouldReceive('getById')
@@ -35,25 +34,24 @@ class UpdateTest extends TestCase
 
         $userRepositoryMock->shouldReceive('update')
             ->once()
-            ->with($userExpected, Provider::dtoExptected())
+            ->with($userExpected)
             ->andReturnTrue();
 
-        $updateMock->handle($id, $payloadExpected);
+        $activateMock->handle($id);
     }
 
     public function testFail()
     {
         $this->expectException(Exception::class);
 
-        $updateMock = Mockery::mock(Update::class);
-        $payloadExpected = Provider::failPayloadExpected();
+        $activateMock = Mockery::mock(Activate::class);
         $id = Provider::id();
 
-        $updateMock->shouldReceive('handle')
+        $activateMock->shouldReceive('handle')
             ->once()
-            ->with($id, $payloadExpected)
+            ->with($id)
             ->andThrow(Exception::class);
 
-        $updateMock->handle($id, $payloadExpected);
+        $activateMock->handle($id);
     }
 }

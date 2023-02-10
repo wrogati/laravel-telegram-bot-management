@@ -28,8 +28,8 @@ class UserRouteProvider extends RouteServiceProvider
                             Route::get('activate', ActiveUserController::class)->name('activate');
 
                             Route::group(['prefix' => 'bot'], function () {
-                                Route::post('', BotStoreController::class);
-                                Route::get('', IndexBotByUserController::class);
+                                Route::post('', BotStoreController::class)->name('new-bot');
+                                Route::get('', IndexBotByUserController::class)->name('index-bot');
                             });
                         });
                     });

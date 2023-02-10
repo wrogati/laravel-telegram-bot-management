@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature\User\Actions;
+namespace Tests\Feature\User;
 
 use Symfony\Component\HttpFoundation\Response;
 use Tests\Providers\User\UserStoreProvider as Provider;

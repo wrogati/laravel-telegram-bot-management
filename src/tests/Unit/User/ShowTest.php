@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit\User\Actions;
+namespace Tests\Unit\User;
 
 use Exception;
 use Mockery;
