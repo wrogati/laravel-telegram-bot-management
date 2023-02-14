@@ -4,6 +4,7 @@ namespace TelegramBot\Auth\Infrastructure\Repositories;
 
 use App\Models\Session;
 use App\Models\User;
+use TelegramBot\Auth\Domain\DTO\DisableSessionDTO;
 use TelegramBot\Auth\Domain\DTO\SessionStoreDTO;
 use TelegramBot\Auth\Domain\Repositories\SessionRepository;
 
@@ -24,5 +25,10 @@ class SessionEloquentRepository implements SessionRepository
             ->newQuery()
             ->where('auth_secure_token', $authSecureToken)
             ->first();
+    }
+
+    public function disableSession(Session $session, DisableSessionDTO $dto): bool
+    {
+        return $session->update(array_merge($dto->toArray(), ['is_active' => false]));
     }
 }

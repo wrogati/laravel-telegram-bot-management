@@ -22,6 +22,7 @@ class Authenticate
             throw new InvalidSessionException();
 
         $session = $this->getSession($authSecureCode);
+
         if (empty($session))
             throw new InvalidSessionException();
 
@@ -38,6 +39,9 @@ class Authenticate
 
     private function isInvalidSession(Session $session): bool
     {
+        if ($session->is_active === false)
+            return true;
+
         return Carbon::parse($session->getAttribute('expires_in'))->lessThan(Carbon::now());
     }
 }

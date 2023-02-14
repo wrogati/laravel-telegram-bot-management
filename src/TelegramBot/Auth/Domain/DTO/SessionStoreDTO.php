@@ -13,7 +13,8 @@ class SessionStoreDTO
         public readonly string $authSecureToken,
         public readonly string $expiresIn,
         public ?Carbon $disabledAt = null,
-        public ?string $disabledBySessionId = null
+        public ?string $disabledBySessionId = null,
+        public readonly bool $isActive = true
     )
     {
     }

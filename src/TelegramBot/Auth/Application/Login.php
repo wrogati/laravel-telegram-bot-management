@@ -32,9 +32,7 @@ class Login
 
         $dto = new SessionStoreDTO(
             Str::uuid()->toString(),
-            Carbon::now()
-                ->addSeconds(300)
-                ->format('Y-m-d H:i:s')
+            Carbon::now()->addHours(5)
         );
 
         return $this->sessionRepository->store($user, $dto);

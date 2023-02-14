@@ -19,5 +19,6 @@ class Session extends Model
         'expires_in',
         'disabled_at',
         'disabled_by_session_id',
+        'is_active'
     ];
 }
