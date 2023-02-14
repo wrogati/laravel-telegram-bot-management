@@ -3,7 +3,6 @@
 namespace App\Services\TelegramService\app;
 
 use App\Services\TelegramService\app\Contracts\MessageContract;
-use App\Services\TelegramService\app\DTO\Message\AudioUploadResponse;
 use App\Services\TelegramService\app\DTO\Message\Message as MessageDTO;
 use App\Services\TelegramService\app\Http\DTO\File\Animation;
 use App\Services\TelegramService\app\Http\DTO\File\Audio;
@@ -39,7 +38,7 @@ class Message implements MessageContract
         return MessageDTO::makeFromArray($data);
     }
 
-    public function sendAudio(Audio $file): ?AudioUploadResponse
+    public function sendAudio(Audio $file): ?MessageDTO
     {
         $body = filter_var($file->audio, FILTER_VALIDATE_URL)
             ? ['json' => $file->toArray()]
@@ -52,7 +51,7 @@ class Message implements MessageContract
         if (empty($data))
             return null;
 
-        return AudioUploadResponse::makeFromArray($data);
+        return MessageDTO::makeFromArray($data);
     }
 
     public function sendPhoto(Photo $file): ?MessageDTO
