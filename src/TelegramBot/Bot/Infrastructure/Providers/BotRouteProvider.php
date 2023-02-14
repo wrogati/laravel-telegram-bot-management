@@ -6,6 +6,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Route;
 use TelegramBot\Bot\Presentation\Controllers\IndexController;
 use TelegramBot\Bot\Presentation\Controllers\ShowController;
+use TelegramBot\Bot\Presentation\Controllers\UpdateController;
 
 class BotRouteProvider extends RouteServiceProvider
 {
@@ -17,7 +18,8 @@ class BotRouteProvider extends RouteServiceProvider
                     function () {
                         Route::get('', IndexController::class);
                         Route::group(['prefix' => '{botId}'], function () {
-                            Route::get('', ShowController::class);
+                            Route::get('', ShowController::class)->name('show');
+                            Route::patch('', UpdateController::class)->name('update');
                         });
                     }
                 );

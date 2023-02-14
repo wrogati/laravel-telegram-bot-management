@@ -6,6 +6,7 @@ use App\Models\Bot;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Jenssegers\Mongodb\Eloquent\Builder;
 use MongoDB\BSON\ObjectId;
+use TelegramBot\Bot\Domain\DTO\BotUpdateDTO;
 use TelegramBot\Shared\Domain\DTO\OrdinationDTO;
 use TelegramBot\Shared\Domain\Repositories\BotRepository;
 use TelegramBot\User\Domain\DTO\BotStoreDTO;
@@ -51,5 +52,10 @@ class BotEloquentRepository implements BotRepository
         return $this->model
             ->newQuery()
             ->findOrFail(new ObjectId($botId));
+    }
+
+    public function update(Bot $bot, BotUpdateDTO $dto): bool
+    {
+        return $bot->update($dto->toArray());
     }
 }
