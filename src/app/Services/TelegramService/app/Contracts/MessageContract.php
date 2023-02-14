@@ -17,7 +17,7 @@ interface MessageContract
 {
     public function sendSimpleMessage(TelegramSimpleMessage $message): ?Message;
 
-    public function sendAudio(Audio $file): ?AudioUploadResponse;
+    public function sendAudio(Audio $file): ?Message;
 
     public function sendPhoto(Photo $file): ?Message;
 
