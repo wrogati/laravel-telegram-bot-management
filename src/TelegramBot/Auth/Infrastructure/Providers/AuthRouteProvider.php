@@ -14,7 +14,7 @@ class AuthRouteProvider extends RouteServiceProvider
             function () {
                 Route::middleware([/* adicionar middlewares */])->group(
                     function () {
-                        Route::post('login', LoginController::class);
+                        Route::post('login', LoginController::class)->name('login');
                     }
                 );
             }
