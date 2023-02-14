@@ -27,7 +27,7 @@ class SendAudio
     {
         $bot = $this->botRepository->getById($data['bot_id']);
 
-        $audio = $this->getAudio($data['audio']);
+        $audio = $this->getAudio($data['audio.txt']);
 
         $dto = new Audio($data['chat_id'], $audio);
 
@@ -37,12 +37,13 @@ class SendAudio
 
         $this->messageRepository->store($dto);
 
-        $this->deleteAudio();
+        if (!empty($this->pathAudio))
+            $this->deleteAudio();
     }
 
     private function getAudio(mixed $audio)
     {
-        if (is_string($audio))
+        if (is_string($audio) && filter_var($audio, FILTER_VALIDATE_URL))
             return $audio;
 
         $this->setPathAudio($audio);

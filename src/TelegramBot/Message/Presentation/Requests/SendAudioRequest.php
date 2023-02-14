@@ -15,7 +15,7 @@ class SendAudioRequest extends FormRequest
     {
         return [
             'chat_id' => ['required', 'string'],
-            'audio' => ['required']
+            'audio.txt' => ['required']
         ];
     }
 }

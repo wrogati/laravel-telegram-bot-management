@@ -11,10 +11,10 @@ class MessageRouteProvider extends RouteServiceProvider
 {
     public function map(): void
     {
-        Route::prefix('message')->name('bot.')->group(function () {
-            Route::prefix('{botId}')->name('message.')->group(function () {
-                Route::post('message', SimpleMessageController::class)->name('simple');
-                Route::post('send-audio', SendAudioController::class)->name('audio');
+        Route::prefix('message')->name('message.')->group(function () {
+            Route::prefix('{botId}')->group(function () {
+                Route::post('message', SimpleMessageController::class)->name('text');
+                Route::post('send-audio.txt', SendAudioController::class)->name('send-audio');
             });
         });
     }

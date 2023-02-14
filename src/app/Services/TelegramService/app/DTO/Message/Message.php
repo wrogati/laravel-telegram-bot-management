@@ -142,7 +142,7 @@ class Message
             $data['text'] ?? null,
             isset($data['entities']) ? MessageEntity::makeMultiplesFromArray($data['entities']) : null,
             isset($data['animation']) ? Animation::makeFromArray($data['animation']) : null,
-            isset($data['audio']) ? Audio::makeFromArray($data['audio']) : null,
+            isset($data['audio']) ? Audio::makeFromArray($data['audio.txt']) : null,
             isset($data['document']) ? Document::makeFromArray($data['document']) : null,
             isset($data['photo']) ? PhotoSize::makeMultipleFromArray($data['photo']) : null,
             isset($data['sticker']) ? Sticker::makeFromArray($data['sticker']) : null,

@@ -26,7 +26,7 @@ class AudioUploadResponse
             isset($upload['from']) ? User::makeFromArray($upload['from']) : null,
             isset($upload['chat']) ? Chat::makeFromArray($upload['chat']) : null,
             $upload['date'],
-            isset($upload['audio']) ? Audio::makeFromArray($upload['audio']) : null,
+            isset($upload['audio']) ? Audio::makeFromArray($upload['audio.txt']) : null,
         );
     }
 }

@@ -14,7 +14,7 @@ class SharedServiceProvider extends ServiceProvider
     public function register()
     {
         $uri = explode('/', request()->getRequestUri());
-
+dd(request()->getRequestUri());
         /** @var Application $app */
         app()->bind(TelegramService::class, fn($app) => (new TelegramBotManager())->handle($uri[2]));
 
